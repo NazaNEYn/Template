@@ -1,0 +1,403 @@
+/* Reset */
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+}
+
+
+/* ********* */
+
+:root {
+    --black: #23252f;
+    --neon-green: #64ed85;
+    --white: #efe;
+    --pink: #e7786f;
+    --light-blue: #bccffa;
+    --dark-blue--1: #4b6cb7;
+    --dark-blue--2: #182848;
+    --purple: #884291;
+}
+
+
+/***************************  */
+
+body {
+    font-family: 'Paytone One', sans-serif;
+    /* color: var(--white); */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg) center no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--black);
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: .8em 0;
+}
+
+nav li {
+    list-style: none;
+    font-size: clamp(1.1rem, 2.2vw, 4rem);
+    margin: 0 1em;
+}
+
+nav a {
+    color: var(--white);
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-top: solid var(--purple) .5vmin;
+    filter: hue-rotate(20deg);
+    width: 70%;
+    /* margin-top: 1.6em; */
+    left: 50%;
+    transform: translate(-50%);
+    transition: .6s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    transition: .6s;
+}
+
+
+/* ******************* */
+
+h1 {
+    font-size: clamp(3rem, 8vw, 8rem);
+    /* color: var(--purple); */
+    background: -webkit-linear-gradient( #FC466B 0%, #3F5EFB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    /* border: solid var(--purple) 2px; */
+    padding: 1em 0;
+    text-align: center;
+    animation: move-right 1s;
+}
+
+@keyframes move-right {
+    0% {
+        transform: translateX(60px);
+    }
+    35% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* ******************* */
+
+
+/* Quote section */
+
+
+/* ******************* */
+
+.txt {
+    width: 100%;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background-color: #88429136;
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(1.1rem, 1.2vw, 2rem);
+    color: var(--white);
+    padding: 5em 0;
+    /* margin-bottom: 5em; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+}
+
+.quote {
+    background: var(--purple);
+    /* background: -webkit-linear-gradient( 45deg, #FC466B 0%, #3F5EFB 100%); */
+    border-radius: 7px;
+    width: clamp(300px, 50%, 1100px);
+    margin: 1.2em 2em;
+    padding: 2em 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote__user-info {
+    /* border: solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7em auto;
+}
+
+.quote__user-img {
+    margin-right: 1em;
+}
+
+.quote__user-link {
+    /* border: #3F5EFB solid; */
+    margin-top: .4em;
+}
+
+.quote__user-link a {
+    color: var(--dark-blue--2);
+    /* filter: hue-rotate(200deg); */
+}
+
+.quote__user-txt {
+    /* border: solid black; */
+}
+
+.quote__user-txt ul li {
+    margin: 1.6em 0;
+    list-style: none;
+}
+
+img {
+    border-radius: 100%;
+    width: clamp(30px, 10vmin, 1100px);
+    /* border: solid greenyellow; */
+}
+
+.transparent {
+    background: rgba(0, 0, 0, 0);
+}
+
+
+/* *********************************************** */
+
+
+/* pics */
+
+
+/* *********************************************** */
+
+.container {
+    /* max-width: 80%; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: solid red; */
+    margin: 10em 0;
+}
+
+.big-box {
+    width: clamp(300px, 80%, 1000px);
+    /* height: clamp(300px, 80vmin, 1000px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+    /* width: 100%; */
+    /* border: solid greenyellow; */
+}
+
+.box {
+    width: 600px;
+    height: 200px;
+    background: linear-gradient(to right, var(--purple), #62325e);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+    /* border: solid var(--purple) 0; */
+}
+
+
+/* SMALL screen */
+
+@media(max-width: 600px) {
+    .big-box {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        /* border: solid red; */
+        padding: 1.5em 0;
+    }
+    .box {
+        width: max(150px, 100px);
+        height: max(150px, 100px);
+        /* flex: 1; */
+    }
+    .box:nth-child(1)::before,
+    .box:nth-child(2)::before,
+    .box:nth-child(3)::before,
+    .box:nth-child(4)::before,
+    .box:nth-child(5)::before {
+        filter: opacity(1);
+    }
+}
+
+
+/* BIG screen */
+
+@media(min-width: 601px) {
+    .big-box {
+        height: clamp(300px, 60vmin, 1000px);
+    }
+    .box {
+        flex: .19;
+    }
+    .box:hover {
+        flex: .25;
+    }
+    /* .box:nth-child(1)::before,
+    .box:nth-child(2)::before,
+    .box:nth-child(3)::before,
+    .box:nth-child(4)::before,
+    .box:nth-child(5)::before {
+        filter: opacity(0);
+    }
+    .box p {
+        opacity: 0;
+    }
+    .box:hover p {
+        animation: fade 2s .5s ease-in-out;
+    } */
+}
+
+.box:hover {
+    transition: .5s;
+    /* border: solid var(--purple) 2px; */
+    border-radius: 7px;
+}
+
+.box:nth-child(1)::before,
+.box:nth-child(2)::before,
+.box:nth-child(3)::before,
+.box:nth-child(4)::before,
+.box:nth-child(5)::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transition: 1.5s;
+    border-radius: 7px;
+    filter: grayscale(60%);
+    /* border: solid var(--purple) 0; */
+}
+
+.box:nth-child(1):hover::before,
+.box:nth-child(2):hover::before,
+.box:nth-child(3):hover::before,
+.box:nth-child(4):hover::before,
+.box:nth-child(5):hover::before {
+    transition: 1s;
+    filter: opacity(1) grayscale(10%);
+    /* border: solid var(--purple) 4px; */
+    border-radius: 7px;
+}
+
+.box:nth-child(1)::before {
+    background: url(https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/4d/2c/53/4d2c532e-813d-14d2-6c5f-7fa95b1c5ef8/source/256x256bb.jpg) center;
+    background-size: cover;
+}
+
+.box:nth-child(2)::before {
+    background: url(https://wallpaperaccess.com/full/4484041.jpg) center;
+    background-size: cover;
+}
+
+.box:nth-child(3)::before {
+    background: url(https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/4d/2c/53/4d2c532e-813d-14d2-6c5f-7fa95b1c5ef8/source/256x256bb.jpg) center;
+    background-size: cover;
+}
+
+.box:nth-child(4)::before {
+    background: url(https://i.pinimg.com/474x/85/1a/5d/851a5de82705f57551eab29428736afd.jpg) center;
+    background-size: cover;
+}
+
+.box:nth-child(5)::before {
+    background: url(https://is2-ssl.mzstatic.com/image/thumb/Purple124/v4/32/25/a1/3225a146-cd8c-6f51-1f0c-7680757c5ed0/source/256x256bb.jpg) center;
+    background-size: cover;
+}
+
+.box p {
+    /* opacity: 0; */
+    color: var(--white);
+    font-size: clamp(.85rem, 2.3vw, 3rem);
+    color: var(--white);
+    padding: .3em .5em;
+    backdrop-filter: blur(4px) saturate(163%);
+    -webkit-backdrop-filter: blur(4px) saturate(163%);
+    background: #88429199;
+    border-radius: 7px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* ************************* */
+
+footer {
+    width: 100%;
+    /* height: 5vmin; */
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    padding: .6em 0;
+}
+
+footer p {
+    width: 80%;
+    text-align: center;
+}
