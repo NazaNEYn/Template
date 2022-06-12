@@ -4,6 +4,6 @@ Feel free to use this template if you like <br>
 Here's the live preview : <br>
 https://nazaneyn.github.io/Template/ <br>
 
-![image](polywork-production.imgix.net/vai4ldd3q8vwboygp9ctuh5tcczu?ixlib=rails-4.2.0&w=650&auto=format&dpr=1&q=75)
 
 
+![image](https://user-images.githubusercontent.com/68081983/173246477-fea9e2d9-8ffe-4751-8894-e93d6fec27ab.png)
